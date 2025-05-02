@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "22b53eb2-7b8b-4c69-838a-dc2216bd8e1d",
+		"name": "Go Fibre - CRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43236001"
+	},
+	"item": [
+		{
+			"name": "Create a Lead",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sapna\",\r\n    \"company\": \"Vision IAS\",\r\n    \"email\": \"sapna@gmail.com\",\r\n    \"phone\": 1234567890\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/createlead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"createlead"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create a Lead",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sapna\",\r\n    \"company\": \"Vision IAS\",\r\n    \"email\": \"sapna@gmail.com\",\r\n    \"phone\": 1234567890\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/createlead",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"createlead"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 08:51:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 5,\n    \"CreatedAt\": \"2025-05-02T14:21:20.8697441+05:30\",\n    \"UpdatedAt\": \"2025-05-02T14:21:20.8697441+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"Sapna\",\n    \"company\": \"Vision IAS\",\n    \"email\": \"sapna@gmail.com\",\n    \"phone\": 1234567890\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all Leads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/getleads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"getleads"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Leads",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/getleads",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"getleads"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 08:51:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1040"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"CreatedAt\": \"2025-05-02T14:20:34.4177111+05:30\",\n        \"UpdatedAt\": \"2025-05-02T14:20:34.4177111+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Mandeep Kaur\",\n        \"company\": \"Vision IAS\",\n        \"email\": \"mandeep123@gmail.com\",\n        \"phone\": 1234567890\n    },\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2025-05-02T14:20:50.8877194+05:30\",\n        \"UpdatedAt\": \"2025-05-02T14:20:50.8877194+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Rohit\",\n        \"company\": \"Vision IAS\",\n        \"email\": \"rohit@gmail.com\",\n        \"phone\": 1234567890\n    },\n    {\n        \"ID\": 3,\n        \"CreatedAt\": \"2025-05-02T14:21:01.6066343+05:30\",\n        \"UpdatedAt\": \"2025-05-02T14:21:01.6066343+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Raman\",\n        \"company\": \"Vision IAS\",\n        \"email\": \"raman@gmail.com\",\n        \"phone\": 1234567890\n    },\n    {\n        \"ID\": 4,\n        \"CreatedAt\": \"2025-05-02T14:21:11.1889833+05:30\",\n        \"UpdatedAt\": \"2025-05-02T14:21:11.1889833+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Rakesh\",\n        \"company\": \"Vision IAS\",\n        \"email\": \"rakesh@gmail.com\",\n        \"phone\": 1234567890\n    },\n    {\n        \"ID\": 5,\n        \"CreatedAt\": \"2025-05-02T14:21:20.8697441+05:30\",\n        \"UpdatedAt\": \"2025-05-02T14:21:20.8697441+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Sapna\",\n        \"company\": \"Vision IAS\",\n        \"email\": \"sapna@gmail.com\",\n        \"phone\": 1234567890\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Lead By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/getlead/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"getlead",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Lead By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/getlead/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"getlead",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 08:54:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 1,\n    \"CreatedAt\": \"2025-05-02T14:20:34.4177111+05:30\",\n    \"UpdatedAt\": \"2025-05-02T14:20:34.4177111+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"Mandeep Kaur\",\n    \"company\": \"Vision IAS\",\n    \"email\": \"mandeep123@gmail.com\",\n    \"phone\": 1234567890\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a Lead",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/deletelead/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"deletelead",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a Lead",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/deletelead/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"deletelead",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 08:55:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "Lead deleted successfully!"
+				}
+			]
+		}
+	]
+}
